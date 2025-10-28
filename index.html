@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Minero | Full Stack Developer">
+    <link rel="icon" type="image/png" href="/public/icon.ico">
+    <title>Carlos Minero | Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div id="particles-js" class="molecule-bg"></div>
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl gradient-text">Carlos Minero</div>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition-colors" data-es="Sobre mí"
+                        data-en="About me">About me</a>
+                    <a href="#stack" class="text-gray-700 hover:text-indigo-600 transition-colors" data-es="Stack"
+                        data-en="Stack">Stack</a>
+                    <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition-colors"
+                        data-es="Experiencia" data-en="Experience">Experience</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors" data-es="Contacto"
+                        data-en="Contact">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-600">ES</span>
+                        <div class="lang-toggle active" id="langToggle"></div>
+                        <span class="text-sm text-gray-600">EN</span>
+                    </div>
+                    <button class="md:hidden p-2">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section id="hero" class="min-h-screen flex items-center justify-center px-4 pt-16">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="fade-in">
+                <div class="mb-6 mt-10">
+                    <span class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium"
+                        data-es="Disponible para nuevos proyectos"
+                        data-en="Available for new projects">
+                        Available for new projects
+                    </span>
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6">
+                    <span data-es="Hola, soy" data-en="Hi, I'm">Hi, I'm</span><br>
+                    <span class="gradient-text">Carlos Minero</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed"
+                    data-es="Full Stack Software Engineer con 6+ años de experiencia creando aplicaciones web y móviles modernas. Especializado en React, React Native y Node.js"
+                    data-en="Full Stack Software Engineer with 6+ years of experience creating modern web and mobile applications. Specialized in React, React Native and Node.js">
+                    Full Stack Software Engineer with 6+ years of experience creating modern web and mobile applications.
+                    Specialized in React, React Native and Node.js.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact"
+                        class="bg-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-indigo-700 transition-colors text-center"
+                        data-es="Contáctame" data-en="Contact me">
+                        Contact me
+                    </a>
+                    <a href="#stack"
+                        class="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center"
+                        data-es="Ver mi trabajo" data-en="View my work">
+                        View my work
+                    </a>
+                </div>
+            </div>
+
+            <div class="fade-in lg:order-first">
+                <div class="relative">
+                    <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 p-1">
+                        <div class="w-full h-full rounded-full bg-gray-100 flex items-center justify-center">
+                            <img src="public/photo.jpg" alt="Carlos Minero" class="w-full h-full rounded-full">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute -top-4 -right-4 w-16 h-16 bg-yellow-400 rounded-lg flex items-center justify-center text-white text-xl floating-card">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center text-white text-xl floating-card">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div
+                        class="absolute top-1/2 -right-8 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white floating-card">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4 gradient-text" data-es="¿Quién soy yo?" data-en="Who am I?">¿Quién
+                    soy yo?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto"
+                    data-es="Soy un desarrollador apasionado por crear soluciones digitales que marquen la diferencia"
+                    data-en="I'm a developer passionate about creating digital solutions that make a difference">
+                    Soy un desarrollador apasionado por crear soluciones digitales que marquen la diferencia
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-6" data-es="Mi enfoque" data-en="My approach">Mi enfoque</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed"
+                        data-es="Con más de 6 años de experiencia en desarrollo web y móvil, me especializo en crear aplicaciones modernas que no solo funcionen perfectamente, sino que también brinden una experiencia de usuario excepcional."
+                        data-en="With over 6 years of experience in web and mobile development, I specialize in creating modern applications that not only work perfectly, but also provide an exceptional user experience.">
+                        Con más de 6 años de experiencia en desarrollo web y móvil, me especializo en crear aplicaciones
+                        modernas que no solo funcionen perfectamente, sino que también brinden una experiencia de
+                        usuario excepcional.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed"
+                        data-es="He trabajado con empresas internacionales como Onboardian y Excel Automotriz, contribuyendo a soluciones para ventas de automóviles, gestión de recursos humanos, nutrición, e-commerce y bienes raíces."
+                        data-en="I have worked with international companies like Onboardian and Excel Automotriz, contributing to solutions for car sales, human resources management, nutrition, e-commerce and real estate.">
+                        He trabajado con empresas internacionales como Onboardian y Excel Automotriz, contribuyendo a
+                        soluciones para ventas de automóviles, gestión de recursos humanos, nutrición, e-commerce y
+                        bienes raíces.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">6+</div>
+                            <div class="text-gray-600" data-es="Años de experiencia" data-en="Years of experience">Años
+                                de experiencia</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-3xl font-bold text-indigo-600 mb-2">10+</div>
+                            <div class="text-gray-600" data-es="Proyectos completados" data-en="Projects completed">
+                                Proyectos completados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl">
+                        <h4 class="text-xl font-semibold mb-6" data-es="Certificaciones" data-en="Certifications">
+                            Certificaciones</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                                <span>Scrum Foundation Professional Certificate (2023)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                                <span>Scrum Master Professional Certificate (2023)</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-indigo-500 rounded-full"></div>
+                                <span>UX / UI Mobile apps (2023)</span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-xl font-semibold mt-8 mb-6" data-es="Educación" data-en="Education">Educación
+                        </h4>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 bg-purple-500 rounded-full"></div>
+                            <div>
+                                <div class="font-medium">Universidad Centroamericana José Simeón Cañas (UCA)</div>
+                                <div class="text-sm text-gray-600" data-es="Ingeniería de Software (2021)"
+                                    data-en="Software Engineering (2021)">Ingeniería de Software (2021)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4 gradient-text" data-es="Mi Stack Tecnológico"
+                    data-en="My Tech Stack">Mi Stack Tecnológico</h2>
+                <p class="text-xl text-gray-600" data-es="Tecnologías con las que trabajo día a día"
+                    data-en="Technologies I work with daily">Tecnologías con las que trabajo día a día</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-react text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">React</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="95"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">95% - 6 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Libreria principal para desarrollo frontend con amplia experiencia en hooks, context API y optimización."
+                        data-en="Main Library for frontend development with extensive experience in hooks, context API and optimization.">
+                        Libreria principal para desarrollo frontend con amplia experiencia en hooks, context API y
+                        optimización.
+                    </p>
+                </div>
+
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-react text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">React Native</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="90"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">90% - 5 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo de aplicaciones móviles híbridas para iOS y Android con integraciones nativas."
+                        data-en="Development of hybrid mobile applications for iOS and Android with native integrations.">
+                        Desarrollo de aplicaciones móviles híbridas para iOS y Android con integraciones nativas.
+                    </p>
+                </div>
+
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-microsoft text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">.NET</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">60% - 2 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo de APIs REST robustas y aplicaciones backend con C# y .NET 9.0."
+                        data-en="Development of robust REST APIs and backend applications with C# and .NET 9.0.">
+                        Desarrollo de APIs REST robustas y aplicaciones backend con C# y .NET 9.0.
+                    </p>
+                </div>
+
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-node-js text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Node.js</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="70"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">70% - 4 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo backend con Express.js, NestJS y manejo de bases de datos relacionales y no relacionales (MongoDB)."
+                        data-en="Backend development with Express.js, NestJS and database management (relational and non-relational databases).">
+                        Desarrollo backend con Express.js, NestJS y manejo de bases de datos relacionales y no
+                        relacionales (MongoDB).
+                    </p>
+                </div>
+
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-js-square text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">TypeScript</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="92"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">92% - 4 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo tipado para mejor mantenibilidad y prevención de errores en tiempo de compilación."
+                        data-en="Typed development for better maintainability and compile-time error prevention.">
+                        Desarrollo tipado para mejor mantenibilidad y prevención de errores en tiempo de compilación.
+                    </p>
+                </div>
+
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-figma text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Figma</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="80"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">80% - 3 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Diseño UI/UX, prototipado y colaboración con equipos de diseño."
+                        data-en="UI/UX design, prototyping and collaboration with design teams.">
+                        Diseño UI/UX, prototipado y colaboración con equipos de diseño.
+                    </p>
+                </div>
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-android text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Android (Kotlin)</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">60% - 2 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo de aplicaciones móviles nativas para Android con Kotlin y Jetpack Compose."
+                        data-en="Development of native mobile applications for Android with Kotlin and Jetpack Compose.">
+                        Desarrollo de aplicaciones móviles nativas para Android con Kotlin y Jetpack Compose.
+                    </p>
+                </div>
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fab fa-apple text-gray-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">iOS (Swift)</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">60% - 2 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Desarrollo de aplicaciones móviles nativas para iOS con Swift y SwiftUI."
+                        data-en="Development of native mobile applications for iOS with Swift and SwiftUI.">
+                        Desarrollo de aplicaciones móviles nativas para iOS con Swift y SwiftUI.
+                    </p>
+                </div>
+                <div class="fade-in floating-card bg-white p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa-solid fa-database text-gray-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Bases de datos</h3>
+                    </div>
+                    <div class="progress-bar mb-2">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                    <div class="text-sm text-gray-600 mb-4">75% - 4 años</div>
+                    <p class="text-gray-600 text-sm"
+                        data-es="Experencia en manejo de bases de datos relacionales y no relacionales, contribuyendo al mantenimiento y desarrollo de consultas y procedimientos almacenados."
+                        data-en="Experience in managing relational and non-relational databases, contributing to maintenance and development of queries and stored procedures.">
+                        Experencia en manejo de bases de datos relacionales y no relacionales, contribuyendo al
+                        mantenimiento y desarrollo de consultas y procedimientos almacenados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4 gradient-text" data-es="Experiencia Profesional"
+                    data-en="Professional Experience">Experiencia Profesional</h2>
+                <p class="text-xl text-gray-600" data-es="Mi trayectoria profesional" data-en="My professional journey">
+                    Mi trayectoria profesional</p>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gray-200"></div>
+
+                <div class="relative mb-12 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg floating-card">
+                                <h3 class="text-xl font-semibold mb-2">Focus El Salvador</h3>
+                                <p class="text-indigo-600 font-medium mb-2" data-es="Sr. Fullstack Javascript Developer"
+                                    data-en="Sr. Fullstack Javascript Developer">Sr. Fullstack Javascript Developer</p>
+                                <p class="text-gray-500 text-sm mb-4" data-es="Julio 2025 - Presente"
+                                    data-en="July 2025 - Present">Julio 2025 - Presente</p>
+                                <ul class="text-gray-600 text-sm space-y-1 text-left">
+                                    <li data-es="• Desarrollo y mantenimiento de aplicaciones web con React y Vite.js"
+                                        data-en="• Development and maintenance of web applications with React and Vite.js">
+                                        • Desarrollo y mantenimiento de aplicaciones web con React y Vite.js</li>
+                                    <li data-es="• Desarrollo de servicios web con Express y Nest"
+                                        data-en="• Development of web services with Express and Nest">• Desarrollo de
+                                        servicios web con Express y Nest</li>
+                                    <li data-es="• Creación de aplicaciones web desde diseños Figma"
+                                        data-en="• Creation of web applications from Figma designs">• Creación de
+                                        aplicaciones web desde diseños Figma</li>
+                                    <li data-es="• Contribución en creación de diseños en figma"
+                                        data-en="• Contribution in creation of designs in figma">• Contribución en
+                                        creación de diseños en figma</li>
+                                    <li data-es="• Escritura y mantenimiento de pruebas unitarias con Jest.js"
+                                        data-en="• Writing and maintaining unit tests with Jest.js">• Escritura y
+                                        mantenimiento de pruebas unitarias con Jest.js</li>
+                                </ul>
+                                <div class="text-gray-600 text-sm mt-4">
+                                    <p class="text-gray-600 text-sm text-left">
+                                        <span class="font-bold">Stack:</span> React, Vite.js, Express, Nest, Jest.js,
+                                        Figma
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-indigo-600 rounded-full border-4 border-white relative z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-4 h-4 bg-indigo-600 rounded-full border-4 border-white relative z-10"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-lg floating-card">
+                                <h3 class="text-xl font-semibold mb-2">Applaudo</h3>
+                                <p class="text-indigo-600 font-medium mb-2" data-es="Frontend Developer"
+                                    data-en="Frontend Developer">Frontend Developer</p>
+                                <p class="text-gray-500 text-sm mb-4" data-es="Abril 2025 - Mayo 2025"
+                                    data-en="April 2025 - May 2025">Abril 2025 - Mayo 2025</p>
+                                <ul class="text-gray-600 text-sm space-y-1">
+                                    <li data-es="• Desarrollo y mantenimiento de aplicaciones web con React y Vite.js"
+                                        data-en="• Development and maintenance of web applications with React and Vite.js">
+                                        • Desarrollo y mantenimiento de aplicaciones web con React y Vite.js</li>
+                                    <li data-es="• Escritura y mantenimiento de pruebas unitarias con Jest.js"
+                                        data-en="• Writing and maintaining unit tests with Jest.js">• Escritura y
+                                        mantenimiento de pruebas unitarias con Jest.js</li>
+                                    <li data-es="• Trabajo en equipo con otros departamentos"
+                                        data-en="• Teamwork with other departments">• Trabajo en equipo con otros
+                                        departamentos</li>
+                                </ul>
+                                <div class="text-gray-600 text-sm mt-4">
+                                    <p class="text-gray-600 text-sm text-left">
+                                        <span class="font-bold">Stack:</span> React, Vite.js.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg floating-card">
+                                <h3 class="text-xl font-semibold mb-2">Onboardian</h3>
+                                <p class="text-indigo-600 font-medium mb-2" data-es="Frontend Developer"
+                                    data-en="Frontend Developer">Frontend Developer</p>
+                                <p class="text-gray-500 text-sm mb-4" data-es="Julio 2024 - Marzo 2025"
+                                    data-en="July 2024 - March 2025">Julio 2024 - Marzo 2025</p>
+                                <ul class="text-gray-600 text-sm space-y-1 text-left">
+                                    <li data-es="• Desarrollo de aplicaciones móviles híbridas con React Native"
+                                        data-en="• Development of hybrid mobile applications with React Native">•
+                                        Desarrollo de aplicaciones móviles híbridas con React Native</li>
+                                    <li data-es="• Desarrollo de aplicaciones web con React y Vite.js"
+                                        data-en="• Development of web applications with React and Vite.js">• Desarrollo
+                                        de aplicaciones web con React y Vite.js</li>
+                                    <li data-es="• Mantenimiento de aplicaciones web y móviles interno y de clientes"
+                                        data-en="• Maintenance of web and mobile applications internal and client">•
+                                        Mantenimiento de aplicaciones web y móviles interno y de
+                                        clientes</li>
+                                </ul>
+                                <div class="text-gray-600 text-sm mt-4">
+                                    <p class="text-gray-600 text-sm text-left">
+                                        <span class="font-bold">Stack:</span> React Native, React, Vite.js., AWS, Amity,
+                                        StreamChat, GCP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-indigo-600 rounded-full border-4 border-white relative z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+
+                <div class="relative mb-12 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-4 h-4 bg-indigo-600 rounded-full border-4 border-white relative z-10"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-lg shadow-lg floating-card">
+                                <h3 class="text-xl font-semibold mb-2">Excel Automotriz</h3>
+                                <p class="text-indigo-600 font-medium mb-2" data-es="Mobile Developer"
+                                    data-en="Mobile Developer">Mobile Developer</p>
+                                <p class="text-gray-500 text-sm mb-4" data-es="Marzo 2022 - Julio 2024"
+                                    data-en="March 2022 - July 2024">Marzo 2022 - Julio 2024</p>
+                                <ul class="text-gray-600 text-sm space-y-1">
+                                    <li data-es="• Desarrollo de aplicaciones móviles híbridas con React Native"
+                                        data-en="• Development of hybrid mobile applications with React Native">•
+                                        Desarrollo de aplicaciones móviles híbridas con React Native</li>
+                                    <li data-es="• Desarrollo de aplicaciones web con React, Next.js y Vite.js"
+                                        data-en="• Development of web applications with React, Next.js and Vite.js">•
+                                        Desarrollo de aplicaciones web con React, Next.js y Vite.js</li>
+                                    <li data-es="• Contribución a la gestión de base de datos con SQL Server"
+                                        data-en="• Contribution to database management with SQL Server">• Contribución a
+                                        la gestión de base de datos con SQL Server</li>
+                                </ul>
+                                <div class="text-gray-600 text-sm mt-4">
+                                    <p class="text-gray-600 text-sm text-left">
+                                        <span class="font-bold">Stack:</span> React Native, React, Vite.js, Next.js, SQL
+                                        Server, Figma, Azure, Swift, .NET, GCP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mb-12 fade-in">
+                    <div class="flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-lg shadow-lg floating-card">
+                                <h3 class="text-xl font-semibold mb-2">ROOTS INC</h3>
+                                <p class="text-indigo-600 font-medium mb-2" data-es="Frontend Developer"
+                                    data-en="Frontend Developer">Full Stack Developer</p>
+                                <p class="text-gray-500 text-sm mb-4" data-es="Feb 2019 - March 2022"
+                                    data-en="February 2019 - March 2022">Feb 2019 - March 2022</p>
+                                <ul class="text-gray-600 text-sm space-y-1 text-left">
+                                    <li data-es="• Desarrollo de aplicaciones móviles híbridas con React Native"
+                                        data-en="• Development of hybrid mobile applications with React Native">•
+                                        Desarrollo de aplicaciones móviles híbridas con React Native</li>
+
+                                    <li data-es="• Desarrollo de aplicaciones móviles híbridas con React Native"
+                                        data-en="• Development of hybrid mobile applications with React Native">•
+                                        Desarrollo de aplicaciones web con React</li>
+
+                                    <li data-es="• Desarrollo de aplicaciones móviles Android"
+                                        data-en="• Development of Android mobile applications">•
+                                        Desarrollo de aplicaciones móviles con Android</li>
+                                </ul>
+
+                                <div class="text-gray-600 text-sm mt-4">
+                                    <p class="text-gray-600 text-sm text-left">
+                                        <span class="font-bold">Stack:</span> React Native, React, Vite.js., Android, GCP.
+                                        StreamChat
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-4 h-4 bg-indigo-600 rounded-full border-4 border-white relative z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold mb-4 gradient-text" data-es="¡Trabajemos juntos!"
+                    data-en="Let's work together!">¡Trabajemos juntos!</h2>
+                <p class="text-xl text-gray-600"
+                    data-es="Siempre estoy abierto a nuevas oportunidades y proyectos interesantes"
+                    data-en="I'm always open to new opportunities and interesting projects">
+                    Siempre estoy abierto a nuevas oportunidades y proyectos interesantes
+                </p>
+            </div>
+
+            <div>
+                <div class="fade-in">
+                    <div class="flex flex-col md:flex-row justify-between gap-12">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Email</p>
+                                <a href="mailto:carlosminerodubon@gmail.com"
+                                    class="text-gray-600 hover:text-indigo-600 transition-colors" target="_blank">
+                                    carlosminerodubon@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">WhatsApp</p>
+                                <a href="https://wa.me/50373676860"
+                                    class="text-gray-600 hover:text-green-600 transition-colors" target="_blank">
+                                    +503 7367 6860
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-linkedin text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/carlos-antonio-minero-dubón-a216391a4" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors">
+                                    Carlos Antonio Minero Dubón
+                                </a> 
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-github text-gray-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">GitHub</p>
+                                <a href="https://github.com/flexingCode" class="text-gray-600 hover:text-gray-800 transition-colors" target="_blank">
+                                    FlexingCode
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p data-es="© 2025 Carlos Minero. Todos los derechos reservados."
+                data-en="© 2025 Carlos Minero. All rights reserved.">
+                © 2025 Carlos Minero. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
